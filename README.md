@@ -1,4 +1,4 @@
-# 🚀 grpc-demo
+# 🚀 gRPC Demo
 
 A simple **gRPC Hello World** project using **Java + Maven**, demonstrating how to define services with Protocol Buffers and implement a client/server architecture.
 
