@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: greeter-client
+
+
+  grpc:
+    client:
+      channel:
+        # For the connection named "greeter", use this network target
+        greeter:
+          target: "static://localhost:9090"
