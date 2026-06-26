@@ -61,7 +61,7 @@
                     <!-- gRPC Java code generator -->
                     <pluginId>grpc-java</pluginId>
                     <pluginArtifact>
-                        io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}
+                        io.grpc:protoc-gen-grpc-java:${grpc.codegen.version}:exe:${os.detected.classifier}
                     </pluginArtifact>
 
                 </configuration>

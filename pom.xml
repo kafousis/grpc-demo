@@ -21,9 +21,9 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.boot.version>4.1.0</spring.boot.version>
-        <protobuf.version>4.35.1</protobuf.version>
-        <protoc.version>4.35.1</protoc.version>
-        <grpc.version>1.82.0</grpc.version>
+        <!--Should match runtime versions that Spring Boot resolves-->
+        <grpc.codegen.version>1.80.0</grpc.codegen.version>
+        <protoc.version>4.34.2</protoc.version>
     </properties>
 
     <dependencyManagement>
@@ -33,24 +33,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring.boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <!-- gRPC BOM controls versions for all artifacts under io.grpc groupId -->
-            <dependency>
-                <groupId>io.grpc</groupId>
-                <artifactId>grpc-bom</artifactId>
-                <version>${grpc.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <!-- protobuf BOM controls versions for all artifacts under the com.google.protobuf groupId -->
-            <dependency>
-                <groupId>com.google.protobuf</groupId>
-                <artifactId>protobuf-bom</artifactId>
-                <version>${protobuf.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

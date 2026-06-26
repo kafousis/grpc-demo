@@ -14,7 +14,6 @@ import io.grpc.stub.StreamObserver;
 public class GreetingsServiceImpl extends GreetServiceGrpc.GreetServiceImplBase {
 
     public static final Logger log = LoggerFactory.getLogger(GreetingsServiceImpl.class);
-
     @Override
     public void greet(GreetRequest request, StreamObserver<GreetResponse> responseObserver) {
         log.info("Received greet request for: {}", request.getGreeting().getFirstName());
