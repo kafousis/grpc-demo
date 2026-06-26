@@ -17,7 +17,6 @@
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
-            <version>${protobuf.version}</version>
             <scope>compile</scope>
         </dependency>
 
@@ -25,21 +24,19 @@
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-protobuf</artifactId>
-            <version>${grpc.version}</version>
         </dependency>
 
         <!-- gRPC stub API: provides client stubs and server base classes for RPC calls -->
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-stub</artifactId>
-            <version>${grpc.version}</version>
         </dependency>
 
     </dependencies>
 
     <build>
 
-        <!-- enables ${os.detected.classifier} -->
+        <!-- OS detection (needed for protoc binary) -->
         <extensions>
             <extension>
                 <groupId>kr.motd.maven</groupId>
