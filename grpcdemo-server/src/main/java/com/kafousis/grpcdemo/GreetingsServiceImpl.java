@@ -14,11 +14,17 @@ import io.grpc.stub.StreamObserver;
 public class GreetingsServiceImpl extends GreetServiceGrpc.GreetServiceImplBase {
 
     public static final Logger log = LoggerFactory.getLogger(GreetingsServiceImpl.class);
+
     @Override
     public void greet(GreetRequest request, StreamObserver<GreetResponse> responseObserver) {
-        log.info("Received greet request for: {}", request.getGreeting().getFirstName());
 
-        String greeting = "Hello, " + request.getGreeting().getFirstName() + "!";
+        log.info("Received greet request for: {} {}",
+                request.getGreeting().getFirstName(),
+                request.getGreeting().getLastName());
+
+        String greeting = "Hello, "
+                + request.getGreeting().getFirstName() + " "
+                + request.getGreeting().getLastName() + "!";
 
         GreetResponse response = GreetResponse.newBuilder()
                 .setResult(greeting)
