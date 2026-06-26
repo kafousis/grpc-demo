@@ -8,9 +8,9 @@ A simple **gRPC Hello World** project using **Java + Maven**, demonstrating how 
 
 ```
 grpc-demo/
-├── proto/       # .proto definitions + generated code
-├── server/      # gRPC server implementation
-└── client/      # gRPC client implementation
+├── grpcdemo-proto/       # .proto definitions + generated code
+├── grpcdemo-server/      # gRPC server implementation
+└── grpcdemo-client/      # gRPC client implementation
 ```
 
 ---
